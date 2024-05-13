@@ -7,6 +7,15 @@ This setup allows for flexible and customizable content generation, tailored to 
 Feel free to explore and use the app for your social media needs!
 
 
+Basic Functionalities 
+Standard Register With Auth
+JWT Bearer Token protected routes
+Sign in with Linkedin - working simultaneously with Register 
+Magic Link Login Option
+OpenAI and Self-hosted Llama API 
+AI Model Failover 
+
+
 Routes and app config is in the init file
 **NOTE Llama3 API endpoint is defined in llama.py**
 
