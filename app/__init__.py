@@ -12,7 +12,7 @@ from datetime import timedelta
 
 app = Flask(__name__)
 CORS(app) 
-app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = 'YOUR_DB_URI'
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['JWT_SECRET_KEY'] = 'YOUR_SECRET_KEY'
 
