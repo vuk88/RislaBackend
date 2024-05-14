@@ -13,7 +13,8 @@ Feel free to explore and use the app for your social media needs!
 3. Sign in with Linkedin - working simultaneously with Register 
 4. Magic Link Login Option
 5. OpenAI and Self-hosted Llama API 
-6. AI Model Failover 
+6. AI Model Failover
+7. Image analysis via GPT 4o 
 
 
 Routes and app config is in the init file
@@ -34,7 +35,8 @@ ServerSettings model is is for /generate rout weather to check if AI model is in
 10. /logout: Logs out the session.
 11. /force_confirm_email: Force confirms the email address. Intended for use in the Admin Panel.
 12. /magic_auth_link: Generates a magic authentication link. Must be set via the init config.
-13. /magic_auth/<token>: Authenticates a user using a magic authentication token.
-14. /lncallback: Login with LinkedIn callback. Must be set via the init config.
-15. /resend_confirmation: Resends the confirmation email.
-16. /getuserinfo: Retrieves user info, excluding the password and API token.
+13. /analyze-image: Sends a picture to GPT 4o for analysis 
+14. /magic_auth/<token>: Authenticates a user using a magic authentication token.
+15. /lncallback: Login with LinkedIn callback. Must be set via the init config.
+16. /resend_confirmation: Resends the confirmation email.
+17. /getuserinfo: Retrieves user info, excluding the password and API token.
