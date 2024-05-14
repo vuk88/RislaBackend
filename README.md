@@ -1,10 +1,19 @@
 
-# Small Beckend python 
+# Lightweight Backend python 
 Hi, this is the Flask backend I created for a friend's app! The app focuses on generating content and comments for social networks. 
 It does this by retrieving prompts from the ChatGPT API, using users' own tokens for authentication. 
 Additionally, the app can also utilize a self-hosted Llama3 model for prompt generation.
 This setup allows for flexible and customizable content generation, tailored to the needs of each user. 
 Feel free to explore and use the app for your social media needs!
+
+
+**Basic Functionalities**
+1. Standard Register With Auth
+2. JWT Bearer Token protected routes
+3. Sign in with Linkedin - working simultaneously with Register 
+4. Magic Link Login Option
+5. OpenAI and Self-hosted Llama API 
+6. AI Model Failover 
 
 
 Routes and app config is in the init file
