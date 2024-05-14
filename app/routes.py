@@ -49,7 +49,7 @@ def register_routes(app, db):
 # Route to confirm email token - stacked on top due url_for in register route 
 
 @app.route('/confirm_email/<token>', methods=['GET'])
-def confirm_kurac(token):
+def confirm_token(token):
     s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
     try:
         email = s.loads(token, salt='email-confirm', max_age=3600)
@@ -484,3 +484,21 @@ def get_user_info():
         return jsonify(user_info), 200
     else:
         return jsonify({"msg": "User not found"}), 404  
+
+@app.route('/analyze-image', methods=['POST'])
+@jwt_required()
+def analyze_image_route():
+    data = request.get_json()
+    prompt = data.get('prompt')
+    image_url = data.get('image_url')
+    if not prompt or not image_url:
+        return jsonify({'message': 'Both prompt and image_url are required'}), 400
+
+    # Get the username from the JWT token
+    username = get_jwt_identity()
+
+    response = analyze_image(prompt, image_url, username)
+    if 'error' in response:
+        return jsonify(response), 400
+
+    return jsonify({'response': response.choices[0].message.content}), 200        

@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
-from config.db_config import DB_KURAC
 from config.mail_config import MAIL_SERVER, MAIL_PORT, MAIL_USE_TLS, MAIL_USERNAME, MAIL_PASSWORD, MAIL_USE_SSL
 import secrets 
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
